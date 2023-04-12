@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/validate-form.js" type="module" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Formulário</h2>
+
+    <form class="formulario">
+
+        <label for="agencia-conta-select">Agencia/Conta:</label>
+        <select id="agencia-conta-select" name="agencia-conta-select" required>
+            <option value="">Selecione...</option>
+            <option value="00010000000001">00010000000001</option>
+            <option value="00020000000001">00010000000002</option>
+            <option value="00020000000002">00010000000003</option>
+            <option value="00030000000001">00010000000004</option>
+            <!-- Add more options here -->
+        </select><br><br>
+
+        <label for="agencia">Agencia:</label>
+        <input type="text" id="agencia-input" name="agencia" readonly><br><br>
+
+        <label for="conta">Conta:</label>
+        <input type="text" id="conta-input" name="conta" readonly><br><br>
+
+        <!--validate min date is today+1 in Javascript -->
+        <label for="data-pix">Data Transacao:</label>
+        <input type="date" id="data-pix" name="data-pix" required><br><br>
+
+        <label for="tipoChavePix">Tipo Chave Transacao:</label>
+        <select id="tipoChavePix" name="tipoChavePix" required>
+            <option value="">Selecione</option>
+            <option value="CPF">CPF</option>
+            <option value="CNPJ">CNPJ</option>
+            <option value="email">Email</option>
+            <option value="telefone">Celular</option>
+            <option value="aleatorio">Aleatorio</option>
+        </select><br><br>
+
+        <label for="chavePix">Chave Transacao:</label>
+        <input type="text" id="chavePix" name="chavePix" required><br><br>
+
+        <label for="valor">Valor:</label>
+        <input type="number" step="0.01" id="valor" name="valor" required><br><br>
+
+        <label for="situacao-pix">Situação Transacao:</label>
+        <select id="situacao-pix" name="situacao-pix" required>
+            <option value="">Selecione...</option>
+            <option value="criado">Criado</option>
+            <option value="cancelado">Cancelado</option>
+            <option value="efetivado">Efetivado</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+
+</html>
